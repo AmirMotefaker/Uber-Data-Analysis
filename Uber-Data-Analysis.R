@@ -172,7 +172,6 @@ ggplot(day_data, aes(day, Trips)) +
 
 
 # Collect data by day of the week and month
-
 day_month_data <- data %>% group_by(dayofweek, month) %>% dplyr::summarize(Trips = n())
 # `summarise()` has grouped output by 'dayofweek'. You can override using the `.groups` argument.
 day_month_data
@@ -194,3 +193,9 @@ day_month_data
 # # ℹ Use `print(n = ...)` to see more rows
 
 
+# Plot the above data
+ggplot(day_month_data, aes(dayofweek, Trips, fill = month)) + 
+  geom_bar(stat = "identity", aes(fill = month), position = "dodge") + 
+  ggtitle("Trias by Day and Month") + 
+  scale_y_continuous(labels = comma) + 
+  scale_fill_manual(values = colors)

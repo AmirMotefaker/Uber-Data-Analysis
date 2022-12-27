@@ -76,3 +76,20 @@ head(data)
 # 4 2014-04-01 00:28:00 40.7588 -73.9776 B02512 00:28:00   1   Apr 2014       Tue
 # 5 2014-04-01 00:33:00 40.7594 -73.9722 B02512 00:33:00   1   Apr 2014       Tue
 # 6 2014-04-01 00:33:00 40.7383 -74.0403 B02512 00:33:00   1   Apr 2014       Tue
+
+
+# Add Time variables as well 
+data$second = factor(second(hms(data$Time)))
+data$minute = factor(minute(hms(data$Time)))
+data$hour = factor(hour(hms(data$Time)))
+
+
+# Look at the data
+head(data)
+# Date.Time     Lat      Lon   Base     Time day month year dayofweek second minute hour
+# 1 2014-04-01 00:11:00 40.7690 -73.9549 B02512 00:11:00   1   Apr 2014       Tue      0     11    0
+# 2 2014-04-01 00:17:00 40.7267 -74.0345 B02512 00:17:00   1   Apr 2014       Tue      0     17    0
+# 3 2014-04-01 00:21:00 40.7316 -73.9873 B02512 00:21:00   1   Apr 2014       Tue      0     21    0
+# 4 2014-04-01 00:28:00 40.7588 -73.9776 B02512 00:28:00   1   Apr 2014       Tue      0     28    0
+# 5 2014-04-01 00:33:00 40.7594 -73.9722 B02512 00:33:00   1   Apr 2014       Tue      0     33    0
+# 6 2014-04-01 00:33:00 40.7383 -74.0403 B02512 00:33:00   1   Apr 2014       Tue      0     33    0

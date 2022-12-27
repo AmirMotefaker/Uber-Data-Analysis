@@ -215,3 +215,11 @@ month_data
 # 5 Aug    829275
 # 6 Sep   1028136
 
+
+# Plot the Number of Trips place during months in a year
+ggplot(month_data, aes(month, Total, fill = month)) + 
+  geom_bar(stat = "Identity") + 
+  ggtitle("Trips in a month") + 
+  theme(legend.position = "none") + 
+  scale_y_continuous(labels = comma) + 
+  scale_fill_manual(values = colors)

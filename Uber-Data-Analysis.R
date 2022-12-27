@@ -193,9 +193,25 @@ day_month_data
 # # ℹ Use `print(n = ...)` to see more rows
 
 
-# Plot the above data
+# Plot the Collect data by day of the week and month
 ggplot(day_month_data, aes(dayofweek, Trips, fill = month)) + 
   geom_bar(stat = "identity", aes(fill = month), position = "dodge") + 
   ggtitle("Trias by Day and Month") + 
   scale_y_continuous(labels = comma) + 
   scale_fill_manual(values = colors)
+
+
+# Number of Trips place during months in a year
+month_data <- data %>% group_by(month) %>% dplyr::summarize(Total = n())
+
+month_data
+# # A tibble: 6 × 2
+# month   Total
+# <ord>   <int>
+#   1 Apr    564516
+# 2 May    652435
+# 3 Jun    663844
+# 4 Jul    796121
+# 5 Aug    829275
+# 6 Sep   1028136
+

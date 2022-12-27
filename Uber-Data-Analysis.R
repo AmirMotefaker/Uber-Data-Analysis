@@ -244,8 +244,30 @@ datatable(day_hour_data)
 # 10	1	  9	    4688
 
 
-# Plot a heatmap by Hour and Day
-
+# Plot a Heatmap by Hour and Day
 ggplot(day_hour_data, aes(day, hour, fill = Total)) + 
   geom_tile(color = "white") + 
   ggtitle("Heat Map by Hour and Day")
+
+
+# Plot Heatmap by Day and Month
+# Collect data by month and day
+month_day_data <- data %>% group_by(month, day) %>% dplyr::summarize(Trips = n())
+# `summarise()` has grouped output by 'month'. You can override using the `.groups` argument.
+month_day_data
+## A tibble: 183 × 3
+## Groups:   month [6]
+#    month day   Trips
+# <ord> <fct> <int>
+#   1 Apr   1     14546
+#   2 Apr   2     17474
+#   3 Apr   3     20701
+#   4 Apr   4     26714
+#   5 Apr   5     19521
+#   6 Apr   6     13445
+#   7 Apr   7     19550
+#   8 Apr   8     16188
+#   9 Apr   9     16843
+#   10 Apr   10    20041
+# # … with 173 more rows
+# # ℹ Use `print(n = ...)` to see more rows

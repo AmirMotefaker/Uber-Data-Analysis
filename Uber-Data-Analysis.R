@@ -93,3 +93,27 @@ head(data)
 # 4 2014-04-01 00:28:00 40.7588 -73.9776 B02512 00:28:00   1   Apr 2014       Tue      0     28    0
 # 5 2014-04-01 00:33:00 40.7594 -73.9722 B02512 00:33:00   1   Apr 2014       Tue      0     33    0
 # 6 2014-04-01 00:33:00 40.7383 -74.0403 B02512 00:33:00   1   Apr 2014       Tue      0     33    0
+
+
+
+## Data Visualisation
+
+# Plotting the trips by hours in a day
+hourly_data <- data %>% 
+  group_by(hour) %>% 
+  dplyr::summarize(Total = n())
+
+# Show data in a searchable js table
+datatable(hourly_data)
+#     hour	Total
+# 1 	0	    103836
+# 2	  1   	67227
+# 3	  2	    45865
+# 4	  3	    48287
+# 5	  4	    55230
+# 6	  5	    83939
+# 7	  6   	143213
+# 8	  7	    193094
+# 9	  8	    190504
+# 10	9	    159967
+# ...

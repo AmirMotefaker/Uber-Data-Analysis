@@ -163,10 +163,34 @@ day_data
 ## ℹ Use `print(n = ...)` to see more rows
 
 
-
 # Plot the data for the day
 ggplot(day_data, aes(day, Trips)) + 
   geom_bar(stat = "identity", fill = "steelblue") +
   ggtitle("Trips by day of the month") + 
   theme(legend.position = "none") + 
   scale_y_continuous(labels = comma)
+
+
+# Collect data by day of the week and month
+
+day_month_data <- data %>% group_by(dayofweek, month) %>% dplyr::summarize(Trips = n())
+# `summarise()` has grouped output by 'dayofweek'. You can override using the `.groups` argument.
+day_month_data
+# # A tibble: 42 × 3
+# # Groups:   dayofweek [7]
+# dayofweek month  Trips
+# <ord>     <ord>  <int>
+#   1 Sun       Apr    51251
+# 2 Sun       May    56168
+# 3 Sun       Jun    79656
+# 4 Sun       Jul    76327
+# 5 Sun       Aug   110246
+# 6 Sun       Sep   116532
+# 7 Mon       Apr    60861
+# 8 Mon       May    63846
+# 9 Mon       Jun    94655
+# 10 Mon       Jul    93189
+# # … with 32 more rows
+# # ℹ Use `print(n = ...)` to see more rows
+
+

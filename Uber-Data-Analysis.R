@@ -162,3 +162,11 @@ day_data
 ## … with 21 more rows
 ## ℹ Use `print(n = ...)` to see more rows
 
+
+
+# Plot the data for the day
+ggplot(day_data, aes(day, Trips)) + 
+  geom_bar(stat = "identity", fill = "steelblue") +
+  ggtitle("Trips by day of the month") + 
+  theme(legend.position = "none") + 
+  scale_y_continuous(labels = comma)

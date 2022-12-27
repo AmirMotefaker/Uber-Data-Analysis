@@ -25,3 +25,10 @@ june <- read.csv("C:/Users/Amir/Documents/Uber-Data-Analysis/Dataset/uber-raw-da
 july <- read.csv("C:/Users/Amir/Documents/Uber-Data-Analysis/Dataset/uber-raw-data-jul14.csv")
 aug <- read.csv("C:/Users/Amir/Documents/Uber-Data-Analysis/Dataset/uber-raw-data-aug14.csv")
 sept <- read.csv("C:/Users/Amir/Documents/Uber-Data-Analysis/Dataset/uber-raw-data-sep14.csv")
+
+# Combine the data together 
+data <- rbind(apr, may, june, july, aug, sept)
+cat("The dimensions of the data are:", dim(data))
+# The dimensions of the data are: 4534327 4
+
+

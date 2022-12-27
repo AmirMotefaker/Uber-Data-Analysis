@@ -223,3 +223,23 @@ ggplot(month_data, aes(month, Total, fill = month)) +
   theme(legend.position = "none") + 
   scale_y_continuous(labels = comma) + 
   scale_fill_manual(values = colors)
+
+
+
+## Heatmap visualization of day, hour and month
+# Heatmap by Hour and Day
+day_hour_data <- data %>% group_by(day, hour) %>% dplyr::summarize(Total = n())
+# `summarise()` has grouped output by 'day'. You can override using the `.groups` argument.
+
+datatable(day_hour_data)
+#     day	hour	Total
+# 1	  1 	0	    3247
+# 2	  1	  1	    1982
+# 3	  1	  2	    1284
+# 4	  1	  3	    1331
+# 5	  1	  4	    1458
+# 6	  1	  5	    2171
+# 7	  1	  6	    3717
+# 8	  1	  7	    5470
+# 9	  1	  8	    5376
+# 10	1	  9	    4688

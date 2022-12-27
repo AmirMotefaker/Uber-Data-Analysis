@@ -105,15 +105,27 @@ hourly_data <- data %>%
 
 # Show data in a searchable js table
 datatable(hourly_data)
-#     hour	Total
-# 1 	0	    103836
-# 2	  1   	67227
-# 3	  2	    45865
-# 4	  3	    48287
-# 5	  4	    55230
-# 6	  5	    83939
-# 7	  6   	143213
-# 8	  7	    193094
-# 9	  8	    190504
-# 10	9	    159967
+#       hour	Total
+# 1 	  0	    103836
+# 2	    1   	67227
+# 3	    2	    45865
+# 4	    3	    48287
+# 5	    4	    55230
+# 6	    5	    83939
+# 7	    6   	143213
+# 8	    7	    193094
+# 9	    8	    190504
+# 10  	9	    159967
 # ...
+
+
+# Plot the data by hour
+ggplot(hourly_data, aes(hour, Total)) + 
+  geom_bar(stat="identity", 
+           fill="steelblue", 
+           color="red") + 
+  ggtitle("Trips Every Hour", subtitle = "aggregated today") + 
+  theme(legend.position = "none", 
+        plot.title = element_text(hjust = 0.5), 
+        plot.subtitle = element_text(hjust = 0.5)) + 
+  scale_y_continuous(labels=comma)

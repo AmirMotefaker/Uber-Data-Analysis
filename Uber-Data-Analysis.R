@@ -230,7 +230,6 @@ ggplot(month_data, aes(month, Total, fill = month)) +
 # Heatmap by Hour and Day
 day_hour_data <- data %>% group_by(day, hour) %>% dplyr::summarize(Total = n())
 # `summarise()` has grouped output by 'day'. You can override using the `.groups` argument.
-
 datatable(day_hour_data)
 #     day	hour	Total
 # 1	  1 	0	    3247
@@ -243,3 +242,10 @@ datatable(day_hour_data)
 # 8	  1	  7	    5470
 # 9	  1	  8	    5376
 # 10	1	  9	    4688
+
+
+# Plot a heatmap by Hour and Day
+
+ggplot(day_hour_data, aes(day, hour, fill = Total)) + 
+  geom_tile(color = "white") + 
+  ggtitle("Heat Map by Hour and Day")

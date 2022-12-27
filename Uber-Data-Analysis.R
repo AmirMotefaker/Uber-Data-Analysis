@@ -129,3 +129,14 @@ ggplot(hourly_data, aes(hour, Total)) +
         plot.title = element_text(hjust = 0.5), 
         plot.subtitle = element_text(hjust = 0.5)) + 
   scale_y_continuous(labels=comma)
+
+
+# Plotting trips by hour and month
+# Aggregate the data by month and hour
+month_hour_data <- data %>% group_by(month, hour) %>%  dplyr::summarize(Total = n())
+# `summarise()` has grouped output by 'month'. You can override using the `.groups` argument.
+
+ggplot(month_hour_data, aes(hour, Total, fill=month)) + 
+  geom_bar(stat = "identity") + 
+  ggtitle("Trips by Hour and Month") + 
+  scale_y_continuous(labels = comma)

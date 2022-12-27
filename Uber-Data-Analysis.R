@@ -140,3 +140,25 @@ ggplot(month_hour_data, aes(hour, Total, fill=month)) +
   geom_bar(stat = "identity") + 
   ggtitle("Trips by Hour and Month") + 
   scale_y_continuous(labels = comma)
+
+
+# Plotting data by trips during every day of the month
+# Aggregate data by day of the month 
+day_data <- data %>% group_by(day) %>% dplyr::summarize(Trips = n())
+day_data
+## A tibble: 31 × 2
+# day    Trips
+# <fct>  <int>
+#   1 1     127430
+# 2 2     143201
+# 3 3     142983
+# 4 4     140923
+# 5 5     147054
+# 6 6     139886
+# 7 7     143503
+# 8 8     145984
+# 9 9     155135
+# 10 10    152500
+## … with 21 more rows
+## ℹ Use `print(n = ...)` to see more rows
+

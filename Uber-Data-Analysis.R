@@ -62,3 +62,17 @@ head(data)
 # 5 2014-04-01 00:33:00 40.7594 -73.9722 B02512 00:33:00
 # 6 2014-04-01 00:33:00 40.7383 -74.0403 B02512 00:33:00
 
+
+# Create individual columns for month day and year
+data$day <- factor(day(data$Date.Time))
+data$month <- factor(month(data$Date.Time, label=TRUE))
+data$year <- factor(year(data$Date.Time))
+data$dayofweek <- factor(wday(data$Date.Time, label=TRUE))
+head(data)
+# Date.Time     Lat      Lon   Base     Time day month year dayofweek
+# 1 2014-04-01 00:11:00 40.7690 -73.9549 B02512 00:11:00   1   Apr 2014       Tue
+# 2 2014-04-01 00:17:00 40.7267 -74.0345 B02512 00:17:00   1   Apr 2014       Tue
+# 3 2014-04-01 00:21:00 40.7316 -73.9873 B02512 00:21:00   1   Apr 2014       Tue
+# 4 2014-04-01 00:28:00 40.7588 -73.9776 B02512 00:28:00   1   Apr 2014       Tue
+# 5 2014-04-01 00:33:00 40.7594 -73.9722 B02512 00:33:00   1   Apr 2014       Tue
+# 6 2014-04-01 00:33:00 40.7383 -74.0403 B02512 00:33:00   1   Apr 2014       Tue

@@ -22,3 +22,6 @@ sept <- read.csv("D:/AMIR/Programming/Data Science/R Projects/Uber Data Analysis
 # Combine the data together 
 data <- rbind(apr, may, june, july, aug, sept)
 cat("The dimensions of the data are:", dim(data))
+
+# Print the first 6 rows of the data
+head(data)

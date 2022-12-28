@@ -123,3 +123,32 @@ head(data)
 </table>
 
 
+
+
+```R
+# Add Time variables as well 
+data$second = factor(second(hms(data$Time)))
+data$minute = factor(minute(hms(data$Time)))
+data$hour = factor(hour(hms(data$Time)))
+```
+
+
+```R
+# Look at the data
+head(data)
+```
+
+
+<table>
+<thead><tr><th scope=col>Date.Time</th><th scope=col>Lat</th><th scope=col>Lon</th><th scope=col>Base</th><th scope=col>Time</th><th scope=col>day</th><th scope=col>month</th><th scope=col>year</th><th scope=col>dayofweek</th><th scope=col>second</th><th scope=col>minute</th><th scope=col>hour</th></tr></thead>
+<tbody>
+	<tr><td>2014-04-01 00:11:00</td><td>40.7690            </td><td>-73.9549           </td><td>B02512             </td><td>00:11:00           </td><td>1                  </td><td>Apr                </td><td>2014               </td><td>Tue                </td><td>0                  </td><td>11                 </td><td>0                  </td></tr>
+	<tr><td>2014-04-01 00:17:00</td><td>40.7267            </td><td>-74.0345           </td><td>B02512             </td><td>00:17:00           </td><td>1                  </td><td>Apr                </td><td>2014               </td><td>Tue                </td><td>0                  </td><td>17                 </td><td>0                  </td></tr>
+	<tr><td>2014-04-01 00:21:00</td><td>40.7316            </td><td>-73.9873           </td><td>B02512             </td><td>00:21:00           </td><td>1                  </td><td>Apr                </td><td>2014               </td><td>Tue                </td><td>0                  </td><td>21                 </td><td>0                  </td></tr>
+	<tr><td>2014-04-01 00:28:00</td><td>40.7588            </td><td>-73.9776           </td><td>B02512             </td><td>00:28:00           </td><td>1                  </td><td>Apr                </td><td>2014               </td><td>Tue                </td><td>0                  </td><td>28                 </td><td>0                  </td></tr>
+	<tr><td>2014-04-01 00:33:00</td><td>40.7594            </td><td>-73.9722           </td><td>B02512             </td><td>00:33:00           </td><td>1                  </td><td>Apr                </td><td>2014               </td><td>Tue                </td><td>0                  </td><td>33                 </td><td>0                  </td></tr>
+	<tr><td>2014-04-01 00:33:00</td><td>40.7383            </td><td>-74.0403           </td><td>B02512             </td><td>00:33:00           </td><td>1                  </td><td>Apr                </td><td>2014               </td><td>Tue                </td><td>0                  </td><td>33                 </td><td>0                  </td></tr>
+</tbody>
+</table>
+
+

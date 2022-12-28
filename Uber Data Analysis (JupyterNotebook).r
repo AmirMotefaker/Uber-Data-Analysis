@@ -25,3 +25,9 @@ cat("The dimensions of the data are:", dim(data))
 
 # Print the first 6 rows of the data
 head(data)
+
+# Readable format for the DateTime
+data$Date.Time <- as.POSIXct(data$Date.Time, format="%m/%d/%Y %H:%M:%S")
+data$Time <- format(as.POSIXct(data$Date.Time, format = "%m/%d/%Y %H:%M:%S"), format="%H:%M:%S")
+data$Date.Time <- ymd_hms(data$Date.Time)
+head(data)

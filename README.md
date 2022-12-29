@@ -28,3 +28,6 @@
 
 ### tidyr
 >This package will help you to tidy your data. The basic principle of tidyr is to tidy the columns where each variable is present in a column, each observation is represented by a row and each value depicts a cell.
+
+### DT
+>With the help of this package, we will be able to interface with the JavaScript Library called – Datatables.

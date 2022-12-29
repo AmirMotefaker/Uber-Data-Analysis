@@ -10,6 +10,8 @@
 - With the help of visualization, companies can avail the benefit of understanding complex data and gaining insights that would help them to craft decisions. 
 - This is more of a data visualization project that will guide you towards using the ggplot2 library for understanding the data and for developing an intuition for understanding the customers who avail the trips.
 
+- In this data analysis, we analyze Uber data from 1th April 2014 to 30th September 2014.
+
 - The goal of this project is to learn visualizations in R.
 
 ## We will import the essential packages that we will use in this uber data analysis project:

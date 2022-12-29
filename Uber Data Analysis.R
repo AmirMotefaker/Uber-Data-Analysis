@@ -297,4 +297,4 @@ ggplot(data, aes(x=Lon, y=Lat)) +
   scale_x_continuous(limits=c(min_long, max_long)) +
   scale_y_continuous(limits=c(min_lat, max_lat)) +
   theme_map() +
-  ggtitle("NYC MAP BASED ON UBER RIDES DURING 2014 (APR-SEP)")
+   ggtitle("NYC MAP BASED ON UBER RIDES DURING 2014 (APR-SEP)")

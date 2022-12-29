@@ -19,3 +19,6 @@
 
 ### ggthemes
 >This is more of an add-on to our main ggplot2 library. With this, we can create better create extra themes and scales with the mainstream ggplot2 package.
+
+### lubridate
+>Our dataset involves various time frames. In order to understand our data in separate time categories, we will make use of the lubridate package.

@@ -285,7 +285,7 @@ ggplot(day_month_data, aes(dayofweek, month, fill = Trips)) +
   ggtitle("Heat Map by Month and Day")
 
 
-# Creating a map visualization of rides in NYC
+## Creating a map visualization of rides in NYC
 # Set Map Constants
 min_lat <- 40 
 max_lat <- 40.91
@@ -298,3 +298,12 @@ ggplot(data, aes(x=Lon, y=Lat)) +
   scale_y_continuous(limits=c(min_lat, max_lat)) +
   theme_map() +
    ggtitle("NYC MAP BASED ON UBER RIDES DURING 2014 (APR-SEP)")
+
+
+
+ggplot(data, aes(x=Lon, y=Lat, color = Base)) +
+  geom_point(size=1) +
+  scale_x_continuous(limits=c(min_long, max_long)) +
+  scale_y_continuous(limits=c(min_lat, max_lat)) +
+  theme_map() +
+  ggtitle("NYC MAP BASED ON UBER RIDES DURING 2014 (APR-SEP) by BASE")

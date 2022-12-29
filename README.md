@@ -31,3 +31,6 @@
 
 ### DT
 >With the help of this package, we will be able to interface with the JavaScript Library called – Datatables.
+
+### scales
+>With the help of graphical scales, we can automatically map the data to the correct scales with well-placed axes and legends.

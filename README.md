@@ -30,7 +30,7 @@
 >### dplyr
 >This package is the lingua franca of data manipulation in R.
 
-### tidyr
+>### tidyr
 >This package will help you to tidy your data. The basic principle of tidyr is to tidy the columns where each variable is present in a column, each observation is represented by a row and each value depicts a cell.
 
 ### DT

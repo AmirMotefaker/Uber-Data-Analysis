@@ -27,7 +27,7 @@
 >### lubridate
 >Our dataset involves various time frames. In order to understand our data in separate time categories, we will make use of the lubridate package.
 
-### dplyr
+>### dplyr
 >This package is the lingua franca of data manipulation in R.
 
 ### tidyr

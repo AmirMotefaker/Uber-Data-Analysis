@@ -1,4 +1,4 @@
-# Uber Data Analysis with R
+# Uber Data Analysis using R
 
 - Dataset: https://www.kaggle.com/datasets/amirmotefaker/uber-dataset-from-april-to-september-2014
 

@@ -18,7 +18,7 @@
 
 ## We will import the essential packages that we will use in this uber data analysis project:
 
-### ggplot2
+>### ggplot2
 >This is the backbone of this project. ggplot2 is the most popular data visualization library that is most widely used for creating aesthetic visualization plots.
 
 ### ggthemes

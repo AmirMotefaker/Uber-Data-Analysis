@@ -1,4 +1,4 @@
-# Importing the Essential Pckages
+# Importing the Essntial Pckages
 library(ggplot2)
 library(ggthemes)
 library(lubridate)

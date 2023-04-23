@@ -1,4 +1,4 @@
-# Importing the Essential Packages
+# Importing the Essential Pckages
 library(ggplot2)
 library(ggthemes)
 library(lubridate)

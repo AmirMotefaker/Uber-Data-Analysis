@@ -1,4 +1,4 @@
-# Uber Data Anlysis using R
+# Uber Data Analysis using R
 
 - With over 118 million users, 5 million drivers, and 6.3 billion trips with 17.4 million trips completed per day - Uber is the company behind the data for moving people and making deliveries hassle-free.
 - How are drivers assigned to riders cost-efficiently, and how is dynamic pricing leveraged to balance supply and demand? 
@@ -10,7 +10,7 @@
 - With the help of visualization, companies can avail the benefit of understanding complex data and gaining insights that would help them to craft decisions. 
 - This is more of a data visualization project that will guide you towards using the ggplot2 library for understanding the data and for developing an intuition for understanding the customers who avail the trips.
 
-- In this data analysis, we analyze Uber data from 1th April 2014 to 30th September 2014.
+- In this data analysis, we analyze Uber data from 1st April 2014 to 30th September 2014.
 
 - The goal of this project is to learn visualizations in R.
 
